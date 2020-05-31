@@ -1,22 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <progressBar counter="counter"/>
+    <quoteForm/>
+    <quoteGrid quotes="quotes"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import progressBar from './components/ProgressBar.vue'
+import quoteForm from './components/QuoteForm.vue'
+import quoteGrid from './components/QuoteGrid.vue'
 
 export default {
   name: 'App',
+  data: function() {
+    return {
+    }
+  },
   components: {
-    HelloWorld
+    progressBar,
+    quoteForm,
+    quoteGrid
   }
 }
 </script>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
